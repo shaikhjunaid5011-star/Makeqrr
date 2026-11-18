@@ -5,7 +5,6 @@ import {
   Home,
   ArrowLeft,
   RotateCcw,
-  Sparkles,
   Layers,
   HelpCircle,
   Compass
@@ -220,7 +219,6 @@ export const NotFoundPage: React.FC = () => {
                 >
                   {isRepaired ? (
                     <>
-                      <Sparkles className="w-3.5 h-3.5" />
                       <span>FIXED</span>
                     </>
                   ) : (
