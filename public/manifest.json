@@ -1,0 +1,32 @@
+{
+  "name": "makeqrr — Free Custom QR Code Generator",
+  "short_name": "makeqrr",
+  "description": "Create free custom QR codes online with beautiful designs, colors, patterns, logos and 50+ templates. Generate and download QR codes instantly without signing up.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#E64500",
+  "categories": ["utilities", "design", "productivity", "business"],
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/assets/aistudio/Glowing_Orange_QR_Q_Icon_27c8178a.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/aistudio/Glowing_Orange_QR_Q_Icon_27c8178a.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

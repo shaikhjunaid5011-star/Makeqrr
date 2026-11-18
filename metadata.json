@@ -1,0 +1,8 @@
+{
+  "name": "Custom QR Studio",
+  "description": "Create free custom QR codes online with beautiful designs, colors, patterns, logos and 50+ templates. Generate and download QR codes instantly without signing up.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

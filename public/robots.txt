@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Allow search engine crawlers full access to static assets for accurate rendering
+Allow: /assets/
+Allow: /icon.svg
+Allow: /manifest.json
+
+# Canonical XML Sitemap
+Sitemap: https://makeqrr.com/sitemap.xml

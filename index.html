@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      (function() {
+        try {
+          var _origFetch = window.fetch;
+          var _activeFetch = _origFetch;
+          Object.defineProperty(window, 'fetch', {
+            get: function() {
+              return _activeFetch;
+            },
+            set: function(fn) {
+              _activeFetch = fn;
+            },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (err) {
+          try {
+            if (typeof Window !== 'undefined' && Window.prototype) {
+              var desc = Object.getOwnPropertyDescriptor(Window.prototype, 'fetch');
+              if (desc && !desc.set) {
+                Object.defineProperty(Window.prototype, 'fetch', {
+                  get: desc.get || function() { return window.fetch; },
+                  set: function(fn) {
+                    Object.defineProperty(this, 'fetch', {
+                      value: fn,
+                      writable: true,
+                      configurable: true,
+                      enumerable: true
+                    });
+                  },
+                  configurable: true,
+                  enumerable: true
+                });
+              }
+            }
+          } catch (_) {}
+        }
+
+        window.addEventListener('error', function(event) {
+          if (event && event.message && event.message.indexOf('fetch') !== -1 && event.message.indexOf('getter') !== -1) {
+            if (event.stopImmediatePropagation) event.stopImmediatePropagation();
+            if (event.preventDefault) event.preventDefault();
+            return true;
+          }
+        }, true);
+
+        // Anti-flash theme initialization
+        try {
+          var savedTheme = localStorage.getItem('custom_qr_theme');
+          var isDark = savedTheme === 'dark' || ((!savedTheme || savedTheme === 'system') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          if (isDark) {
+            document.documentElement.classList.add('dark');
+            document.documentElement.style.colorScheme = 'dark';
+          } else {
+            document.documentElement.classList.remove('dark');
+            document.documentElement.style.colorScheme = 'light';
+          }
+        } catch (_) {}
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free Custom QR Code Generator – Create &amp; Design QR Codes Online | makeqrr</title>
+    <meta name="description" content="Create free custom QR codes online with beautiful designs, colors, patterns, logos and 50+ templates. Generate and download QR codes instantly without signing up." />
+    <meta name="keywords" content="Free QR Code Generator, Custom QR Code Generator, QR Code Maker, Create QR Code Online, QR Code Generator Free, Customizable QR Code Generator, QR Code Designer, QR Code Generator Without Login, WiFi QR Code Generator, WhatsApp QR Code Generator, URL QR Code Generator, vCard QR Code Generator, Custom QR Code with Logo, QR Code Templates, Download QR Code PNG, Download QR Code SVG, makeqrr" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="author" content="makeqrr" />
+    <meta name="application-name" content="makeqrr" />
+    <link rel="canonical" href="https://makeqrr.com/" />
+
+    <!-- Open Graph / Social Sharing Metadata -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="makeqrr" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Free Custom QR Code Generator – Create &amp; Design QR Codes Online | makeqrr" />
+    <meta property="og:description" content="Create free custom QR codes online with beautiful designs, colors, patterns, logos and 50+ templates. Generate and download QR codes instantly without signing up." />
+    <meta property="og:url" content="https://makeqrr.com/" />
+    <meta property="og:image" content="https://makeqrr.com/assets/aistudio/Glowing_Orange_QR_Q_Icon_27c8178a.png" />
+    <meta property="og:image:alt" content="makeqrr – Free Custom QR Code Generator &amp; Designer" />
+    <meta property="og:image:width" content="1254" />
+    <meta property="og:image:height" content="1254" />
+
+    <!-- Twitter / X Card Metadata -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Free Custom QR Code Generator – Create &amp; Design QR Codes Online | makeqrr" />
+    <meta name="twitter:description" content="Create free custom QR codes online with beautiful designs, colors, patterns, logos and 50+ templates. Generate and download QR codes instantly without signing up." />
+    <meta name="twitter:image" content="https://makeqrr.com/assets/aistudio/Glowing_Orange_QR_Q_Icon_27c8178a.png" />
+    <meta name="twitter:image:alt" content="makeqrr – Free Custom QR Code Generator &amp; Designer" />
+
+    <link rel="icon" type="image/png" sizes="1254x1254" href="/assets/aistudio/Glowing_Orange_QR_Q_Icon_27c8178a.png" />
+    <link rel="shortcut icon" type="image/png" href="/assets/aistudio/Glowing_Orange_QR_Q_Icon_27c8178a.png" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/aistudio/Glowing_Orange_QR_Q_Icon_27c8178a.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#E64500" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <script id="dynamic-seo-jsonld" type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Brand",
+          "@id": "https://makeqrr.com/#brand",
+          "name": "makeqrr",
+          "url": "https://makeqrr.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://makeqrr.com/assets/aistudio/Glowing_Orange_QR_Q_Icon_27c8178a.png",
+            "width": 1254,
+            "height": 1254
+          },
+          "description": "Free, privacy-first online QR code generator and customization studio for creating scannable QR codes with custom patterns, colors, frames, and logos."
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://makeqrr.com/#website",
+          "url": "https://makeqrr.com/",
+          "name": "makeqrr",
+          "publisher": {
+            "@id": "https://makeqrr.com/#brand"
+          },
+          "inLanguage": "en"
+        },
+        {
+          "@type": ["WebApplication", "SoftwareApplication"],
+          "@id": "https://makeqrr.com/#webapp",
+          "name": "makeqrr",
+          "url": "https://makeqrr.com/create",
+          "image": "https://makeqrr.com/assets/aistudio/Glowing_Orange_QR_Q_Icon_27c8178a.png",
+          "description": "Create free custom QR codes online with beautiful designs, colors, patterns, logos and 50+ templates. Generate and download QR codes instantly without signing up.",
+          "applicationCategory": "DesignApplication",
+          "applicationSubCategory": "QR Code Generator",
+          "operatingSystem": "All",
+          "isAccessibleForFree": true,
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://makeqrr.com/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://makeqrr.com/"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body class="bg-neutral-50 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 font-sans antialiased min-h-screen selection:bg-[#E64500] selection:text-white dark:selection:bg-[#E64500] dark:selection:text-white">
+    <div id="root"></div>
+    <noscript>
+      <main style="max-width: 960px; margin: 0 auto; padding: 2rem 1rem; font-family: system-ui, sans-serif;">
+        <h1>Create Custom QR Codes That Look Great Anywhere</h1>
+        <p>Create free custom QR codes online with beautiful designs, colors, patterns, logos, and 50+ templates. Generate and download PNG and SVG QR codes instantly without signing up.</p>
+        <nav aria-label="Primary Navigation">
+          <ul>
+            <li><a href="/">Home – Free Custom QR Code Generator</a></li>
+            <li><a href="/create">Create Your Custom QR Code Online</a></li>
+            <li><a href="/templates">Explore 50+ QR Code Templates</a></li>
+            <li><a href="/help">Help, Guides &amp; Frequently Asked Questions</a></li>
+            <li><a href="/about">About makeqrr</a></li>
+            <li><a href="/sponsor">Become a Sponsor</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/terms">Terms of Service</a></li>
+          </ul>
+        </nav>
+      </main>
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
